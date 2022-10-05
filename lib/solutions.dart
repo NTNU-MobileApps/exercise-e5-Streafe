@@ -55,6 +55,7 @@ class BookService{
     await for(final value in stream){
       if(value.title == searchString){
         print(value.title);
+
         controller.add(value);
       }
     }
