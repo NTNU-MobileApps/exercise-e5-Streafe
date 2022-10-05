@@ -37,8 +37,8 @@ class BookRepository {
 }
 
 // Static dummy books in the database
+const spectorBook = Book("Ian Spector", "The Truth About Chuck Norris");
 const kuroseBook = Book("Jim Kurose", "Computer networks");
 const robbinsBook = Book("Jennifer Niederst Robbins", "Learning Web Design");
-const spectorBook = Book("Ian Spector", "The Truth About Chuck Norris");
 
-const staticBookStorage = [kuroseBook, robbinsBook, spectorBook];
+const staticBookStorage = [kuroseBook,robbinsBook, spectorBook];
