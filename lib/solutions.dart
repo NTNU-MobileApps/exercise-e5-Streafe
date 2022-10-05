@@ -47,6 +47,7 @@ class BookService{
     yield* controller.stream;
   }
 
+  /*
   Stream<Book> searchByTitle(String searchString) async*{
     final controller = StreamController<Book>();
 
@@ -60,6 +61,18 @@ class BookService{
     }
     controller.close();
     yield* controller.stream;
+  }
+   */
+
+  Stream<Book> searchByTitle(String searchString) async* {
+    var bookStreamController = StreamController<Book>();
+    Stream<Book> bookStream = getBooks();
+    await for (final book in bookStream) {
+      if(book.title == searchString){
+        bookStreamController.add(book);
+      }
+    }
+    yield* bookStreamController.stream;
   }
 
   void countBooks(void Function(int) callback){
