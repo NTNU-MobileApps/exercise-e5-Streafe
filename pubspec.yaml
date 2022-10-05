@@ -1,0 +1,22 @@
+name: exercise_e5
+description: Exercise E5
+version: 1.0.0
+homepage: https://www.ntnu.edu/studies/courses/IDATA2503
+
+environment:
+  sdk: '>=2.17.5 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  golden_toolkit: ^0.13.0
+
+flutter:
+  uses-material-design: true
